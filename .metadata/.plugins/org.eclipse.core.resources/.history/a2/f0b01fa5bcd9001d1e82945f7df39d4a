@@ -1,0 +1,23 @@
+package com.cbozan.entity;
+import java.util.Scanner;
+import java.lang.String;
+public class RepeatingString {
+	
+
+	
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter a string: ");
+	        String input = sc.nextLine();
+
+	        String formattedString = input;
+	        System.out.print(formattedString);
+	        for (int i = 1; i < input.length(); i++) {
+	            formattedString = formattedString.substring(1) + formattedString.charAt(0);
+	            System.out.print(" " + formattedString);
+	        }
+
+	        sc.close();
+	    }
+	
+}

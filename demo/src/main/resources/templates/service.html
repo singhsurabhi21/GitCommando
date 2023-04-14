@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Service Form</title>
+</head>
+<body>
+    <form id="save-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <br><br>
+
+    <form id="find-form">
+        <label for="id">ID:</label>
+        <input type="number" name="id" id="id" required>
+
+        <button type="submit">Find</button>
+    </form>
+
+    <br><br>
+
+    <div id="result"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#save-form').submit(function(event) {
+                event.preventDefault();
+
+                var name = $('#name').val();
+                var age = $('#age').val();
+
+                $.ajax({
+                    url: '/save',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        name: name,
+                        age: age
+                    }),
+                    success: function() {
+                        alert('Data saved successfully!');
+                    },
+                    error: function() {
+                        alert('Error saving data!');
+                    }
+                });
+            });
+
+            $('#find-form').submit(function(event) {
+                event.preventDefault();
+
+                var id = $('#id').val();
+
+                $.ajax({
+                    url: '/find?id=' + id,
+                    type: 'GET',
+                    success: function(data) {
+                        $('#result').text('Name: ' + data.name + ', Age: ' + data.age);
+                    },
+                    error: function() {
+                        $('#result').text('Error finding data!');
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Title</title>
+</head>
+<body>
+	<h1>Welcome page</h1>
+	<h2>Welcome</h2>
+	<h2 th:text="${name}">Name</h2>
+	<h2 th:text="${email}">Email</h2>
+	<h2 th:text="${message}">Message</h2>
+	<div th:if="${condition}">
+		<p>Condition is true</p>
+	</div>
+	<div th:if="${not condition}">
+		<p>Condition is false</p>
+	</div>
+	<div th:switch="${role}">
+	<p th:case="admin">User is admistrator</p>
+	<p th:case="manager">User is a manager</p>
+	<p th:case="*">User is some thing else</p>
+	</div>
+	<div>
+	<ul>
+	<li th:each="student:${student}"><span th:text="${student}"></span>
+	
+	</li></ul></div>
+</body>
+</html>

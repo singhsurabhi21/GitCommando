@@ -1,0 +1,13 @@
+127.0.0.1 - - [06/Apr/2023:17:42:39 +0530] "GET / HTTP/1.1" 404 752
+127.0.0.1 - - [06/Apr/2023:17:42:41 +0530] "GET /WebMall/ HTTP/1.1" 200 15848
+127.0.0.1 - - [06/Apr/2023:17:42:41 +0530] "GET /WebMall/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+127.0.0.1 - - [06/Apr/2023:17:42:41 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+127.0.0.1 - - [06/Apr/2023:17:44:18 +0530] "GET /WebMall/cart.jsp HTTP/1.1" 200 2308
+127.0.0.1 - - [06/Apr/2023:17:44:24 +0530] "GET /WebMall/add-to-cart?id=1 HTTP/1.1" 302 -
+127.0.0.1 - - [06/Apr/2023:17:44:24 +0530] "GET /WebMall/index.jsp HTTP/1.1" 200 15849
+127.0.0.1 - - [06/Apr/2023:17:44:25 +0530] "GET /WebMall/add-to-cart?id=2 HTTP/1.1" 302 -
+127.0.0.1 - - [06/Apr/2023:17:44:25 +0530] "GET /WebMall/index.jsp HTTP/1.1" 200 15849
+127.0.0.1 - - [06/Apr/2023:17:44:29 +0530] "GET /WebMall/add-to-cart?id=7 HTTP/1.1" 302 -
+127.0.0.1 - - [06/Apr/2023:17:44:29 +0530] "GET /WebMall/index.jsp HTTP/1.1" 200 15849
+127.0.0.1 - - [06/Apr/2023:17:44:33 +0530] "GET /WebMall/add-to-cart?id=7 HTTP/1.1" 200 113
+127.0.0.1 - - [06/Apr/2023:17:44:35 +0530] "GET /WebMall/cart.jsp HTTP/1.1" 200 4857

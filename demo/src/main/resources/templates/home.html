@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Application</title>
+</head>
+<body>
+    <form action="/processForm2" method="">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div th:if="${condition}">
+        <h1>Welcome, Surabhi!</h1>
+        <p>You have unlocked the secret content</p>
+    </div>
+    <div th:unless="${condition}">
+        <h1>Welcome, stranger</h1>
+        <p>Please enter the correct name to unlock the secret content</p>
+    </div>
+</body>
+</html>

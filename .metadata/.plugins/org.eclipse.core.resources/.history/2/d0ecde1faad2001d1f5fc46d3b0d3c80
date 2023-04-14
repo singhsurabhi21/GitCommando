@@ -1,0 +1,20 @@
+package com.sg.ppt;
+
+
+
+
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+ 
+@Retention(RetentionPolicy.RUNTIME)
+public @interface EdurekaAnnotation {
+     String MethodName();
+     String Description();
+}
+ 
+class RetentionsAnnotation{
+      @EdurekaAnnotation(MethodName = "Retention Annotation test", Description = "testing annotations")
+       public void TestMethod(){
+       }
+}
